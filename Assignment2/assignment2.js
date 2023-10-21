@@ -274,3 +274,300 @@
    document.write("You will need " + snacksNeeded + " " + favoriteSnack + " to last you until the ripe old age of " + maximumAge);
 
  
+
+//Assignment 6
+//question 1 
+
+
+
+//question 2
+
+var a = 2, b = 1;
+var result = --a - --b + ++b + b--;
+
+//question 3 
+
+var userName = prompt("Enter your name:");
+document.write("<h2>Hello, " + userName + "!</h2>");
+
+
+//question 4 
+
+var userNumber = prompt("Enter a number (or press Enter for the multiplication table of 5):");
+if (userNumber === "") {
+    userNumber = 5;
+}
+document.write("<h2>Multiplication Table of " + userNumber + "</h2>");
+for (var i = 1; i <= 10; i++) {
+    document.write(userNumber + " x " + i + " = " + (userNumber * i) + "<br>");
+}
+
+
+//question 5 
+
+var subject1 = prompt("Enter the name of the first subject:");
+var subject2 = prompt("Enter the name of the second subject:");
+var subject3 = prompt("Enter the name of the third subject:");
+
+var totalMarks = 100;
+
+var marksSubject1 = parseFloat(prompt("Enter obtained marks for " + subject1 + ":"));
+var marksSubject2 = parseFloat(prompt("Enter obtained marks for " + subject2 + ":"));
+var marksSubject3 = parseFloat(prompt("Enter obtained marks for " + subject3 + ":"));
+
+var totalObtainedMarks = marksSubject1 + marksSubject2 + marksSubject3;
+var percentage = (totalObtainedMarks / (totalMarks * 3)) * 100;
+
+document.write("<h2>Subject Marks</h2>");
+document.write("Subject 1: " + subject1 + " (Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject1 + ")<br>");
+document.write("Subject 2: " + subject2 + " (Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject2 + ")<br>");
+document.write("Subject 3: " + subject3 + " (Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject3 + ")<br>");
+document.write("Total Obtained Marks: " + totalObtainedMarks + "<br>");
+document.write("Percentage: " + percentage.toFixed(2) + "%");
+
+
+
+//question 6 
+
+
+var usDollars = 10; // Amount in US Dollars
+var saudiRiyals = 25; // Amount in Saudi Riyals
+
+var exchangeRateUSD = 104.80; // Exchange rate: 1 US Dollar = 104.80 Pakistani Rupees
+var exchangeRateSAR = 28; // Exchange rate: 1 Saudi Riyal = 28 Pakistani Rupees
+
+var convertedAmountUSD = usDollars * exchangeRateUSD;
+var convertedAmountSAR = saudiRiyals * exchangeRateSAR;
+
+document.write("<h2>Currency Converter</h2>");
+document.write(usDollars + " US Dollars = " + convertedAmountUSD + " Pakistani Rupees<br>");
+document.write(saudiRiyals + " Saudi Riyals = " + convertedAmountSAR + " Pakistani Rupees");
+
+
+
+//Assignment 9-10
+// question 1
+
+var cityName = prompt("Enter the name of your city:");
+
+        if (cityName.toLowerCase() === "karachi") {
+            document.write("<h2>Welcome to the city of lights</h2>");
+        } else {
+            document.write("<h2>Welcome to " + cityName + "</h2>");
+        }
+
+// question 2
+
+var gender = prompt("Enter your gender (male/female):");
+
+if (gender.toLowerCase() === "male") {
+    document.write("<h2>Good Morning Sir</h2>");
+} else if (gender.toLowerCase() === "female") {
+    document.write("<h2>Good Morning Ma'am</h2>");
+} else {
+    document.write("<h2>Good Morning</h2>");
+}
+
+
+// question 3
+
+var signalColor = prompt("Enter the color of the traffic signal (red/yellow/green):");
+
+switch (signalColor.toLowerCase()) {
+    case "red":
+        document.write("<h2>Must Stop</h2>");
+        break;
+    case "yellow":
+        document.write("<h2>Ready to move</h2>");
+        break;
+    case "green":
+        document.write("<h2>Move now</h2>");
+        break;
+    default:
+        document.write("<h2>Invalid input</h2>");
+}
+
+
+// question 4
+
+var remainingFuel = parseFloat(prompt("Enter the remaining fuel in your car (in liters):"));
+
+if (remainingFuel < 0.25) {
+    document.write("<h2>Please refill the fuel in your car</h2>");
+} else {
+    document.write("<h2>Your fuel level is sufficient</h2>");
+}
+
+
+// question 5
+
+//a
+
+var a = 4;
+if (++a === 5){
+    alert("given condition for variable a is true");
+}
+
+
+//b 
+
+var b = 82;
+if (b++ === 83){
+    alert("given condition for variable b is true");
+}
+
+
+//c
+
+var c = 12;
+if (c++ === 13){
+    alert("condition 1 is true");
+}
+if (c === 13){
+    alert("condition 2 is true");
+}
+if (++c < 14){
+    alert("condition 3 is true");
+}
+if (c === 14){
+    alert("condition 4 is true");
+}
+
+
+//d
+
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost){
+    alert("The cost equals");
+}
+
+
+//e
+
+if (true){
+    alert("True");
+}
+if (false){
+    alert("False");
+}
+
+
+
+//f
+
+if ("car" < "cat"){
+    alert("car is smaller than cat");
+}
+
+
+
+// question 6
+
+
+
+
+// question 7
+
+// Store the secret number (you can change it to any number from 1 to 10)
+var secretNumber = 7;
+
+// Prompt user to guess the number
+var userGuess = parseInt(prompt("Guess the secret number (from 1 to 10):"));
+
+// Check if the user's guess is correct or close
+if (userGuess === secretNumber) {
+    alert("Bingo! Correct answer.");
+} else if (userGuess === secretNumber + 1 || userGuess === secretNumber - 1) {
+    alert("Close enough to the correct answer.");
+} else {
+    alert("Sorry, try again.");
+}
+
+
+
+// question 8
+
+// Prompt the user to enter a number
+var userNumber = parseInt(prompt("Enter a number:"));
+
+// Check if the number is divisible by 3
+if (userNumber % 3 === 0) {
+    alert(userNumber + " is divisible by 3.");
+} else {
+    alert(userNumber + " is not divisible by 3.");
+}
+
+
+// question 9
+
+// Prompt the user to enter a number
+var userNumber = parseInt(prompt("Enter a number:"));
+
+// Check if the number is even or odd
+if (userNumber % 2 === 0) {
+    alert(userNumber + " is an even number.");
+} else {
+    alert(userNumber + " is an odd number.");
+}
+
+
+// question 10
+
+// Prompt the user to enter the temperature
+var temperature = parseFloat(prompt("Enter the temperature:"));
+
+// Check the temperature and display a message
+if (temperature > 40) {
+    alert("It is too hot outside.");
+} else if (temperature > 30) {
+    alert("The Weather today is Normal.");
+} else if (temperature > 20) {
+    alert("Today’s Weather is cool.");
+} else if (temperature > 10) {
+    alert("OMG! Today’s weather is so Cool.");
+} else {
+    alert("It's quite cold outside.");
+}
+
+
+// question 11
+
+// Prompt the user for the first number
+var firstNumber = parseFloat(prompt("Enter the first number:"));
+
+// Prompt the user for the operation (+, -, *, /, %)
+var operation = prompt("Enter the operation (+, -, *, /, %):");
+
+// Prompt the user for the second number
+var secondNumber = parseFloat(prompt("Enter the second number:"));
+
+// Initialize a variable to store the result
+var result;
+
+// Perform the selected operation
+if (operation === "+") {
+    result = firstNumber + secondNumber;
+} else if (operation === "-") {
+    result = firstNumber - secondNumber;
+} else if (operation === "*") {
+    result = firstNumber * secondNumber;
+} else if (operation === "/") {
+    if (secondNumber !== 0) {
+        result = firstNumber / secondNumber;
+    } else {
+        result = "Division by zero is not allowed.";
+    }
+} else if (operation === "%") {
+    if (secondNumber !== 0) {
+        result = firstNumber % secondNumber;
+    } else {
+        result = "Modulo by zero is not allowed.";
+    }
+} else {
+    result = "Invalid operation. Please use +, -, *, /, or %.";
+}
+
+// Display the result
+alert("Result: " + result);
