@@ -1,10 +1,15 @@
 //Assignment 5
 //question 1
 
-
+Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Something went wrong!',
+    footer: '<a href="">Why do I have this issue?</a>'
+  })
 // Prompt the user to enter two numbers
- var num1 = prompt("Enter the first number:");
- var num2 = prompt("Enter the second number:");
+ var num1 = prompt("Enter the first number:",3);
+ var num2 = prompt("Enter the second number:",4);
 
  // Convert the input to numbers and perform addition
  var result = parseFloat(num1) + parseFloat(num2);
